@@ -31,44 +31,44 @@ void GameScene::Initialize() {
 	worldTransform_[PartId::Root].Initialize();
 
 	//脊髄（1番）
-	worldTransform_[PartId::Spine].translation_ = {0, 4.5f, 0};//ローカル座標
+	worldTransform_[PartId::Spine].translation_ = {0, 0, 0};//ローカル座標
 	worldTransform_[PartId::Spine].parent_ = &worldTransform_[PartId::Root];
 	worldTransform_[PartId::Spine].Initialize();
 
 	//上半身
 	//胸（2番）
-	worldTransform_[PartId::Chest].translation_ = {0, 4.5f, 0}; //ローカル座標
+	worldTransform_[PartId::Chest].translation_ = {0, 0, 0}; //ローカル座標
 	worldTransform_[PartId::Chest].parent_ = &worldTransform_[PartId::Spine];
 	worldTransform_[PartId::Chest].Initialize();
 
 	//頭（3番）
-	worldTransform_[PartId::Head].translation_ = {0, 5.5f, 0}; //ローカル座標
+	worldTransform_[PartId::Head].translation_ = {0, 2.5f, 0}; //ローカル座標
 	worldTransform_[PartId::Head].parent_ = &worldTransform_[PartId::Chest];
 	worldTransform_[PartId::Head].Initialize();
 
 	//左腕（4番）
-	worldTransform_[PartId::ArmL].translation_ = {4.5f, 0, 0}; //ローカル座標
+	worldTransform_[PartId::ArmL].translation_ = {-2.5f, 0, 0}; //ローカル座標
 	worldTransform_[PartId::ArmL].parent_ = &worldTransform_[PartId::Chest];
 	worldTransform_[PartId::ArmL].Initialize();
 
 	//右腕（5番）
-	worldTransform_[PartId::ArmR].translation_ = {-4.5f, 0, 0}; //ローカル座標
+	worldTransform_[PartId::ArmR].translation_ = {2.5f, 0, 0}; //ローカル座標
 	worldTransform_[PartId::ArmR].parent_ = &worldTransform_[PartId::Chest];
 	worldTransform_[PartId::ArmR].Initialize();
 
 	//下半身
 	//尻（6番）
-	worldTransform_[PartId::Hip].translation_ = {0, -1.5f, 0}; //ローカル座標
+	worldTransform_[PartId::Hip].translation_ = {0, -2.5f, 0}; //ローカル座標
 	worldTransform_[PartId::Hip].parent_ = &worldTransform_[PartId::Spine];
 	worldTransform_[PartId::Hip].Initialize();
 
 	//左足（7番）
-	worldTransform_[PartId::LegL].translation_ = {4.5f, -4.5f, 0}; //ローカル座標
+	worldTransform_[PartId::LegL].translation_ = {-2.5f, -2.5f, 0}; //ローカル座標
 	worldTransform_[PartId::LegL].parent_ = &worldTransform_[PartId::Hip];
 	worldTransform_[PartId::LegL].Initialize();
 
 	//右足（８番）
-	worldTransform_[PartId::LegR].translation_ = {-4.5f, -4.5f, 0}; //ローカル座標
+	worldTransform_[PartId::LegR].translation_ = {2.5f, -2.5f, 0}; //ローカル座標
 	worldTransform_[PartId::LegR].parent_ = &worldTransform_[PartId::Hip];
 	worldTransform_[PartId::LegR].Initialize();
 
